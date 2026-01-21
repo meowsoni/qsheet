@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qsheet - AI Use Declaration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- Template selector -->
+            <div class="template-selector">
+                <label for="templateSelect">Template:</label>
+                <select id="templateSelect" onchange="loadTemplate(this.value)">
+                    <option value="engl">ENGL</option>
+                </select>
+            </div>
+
+            <!-- Section 1: Student Info (dynamically populated) -->
+            <div class="section">
+                <div class="section-header">Student Information</div>
+                <div class="section-body">
+                    <div id="studentFields" class="form-row"></div>
+                </div>
+            </div>
+
+            <!-- AI Usage Checkbox -->
+            <div class="section">
+                <div class="section-header">AI Declaration</div>
+                <div class="section-body">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="usedAI" onchange="toggleAIQuestions()">
+                        <span id="aiCheckboxLabel">I used AI to help me complete this assignment</span>
+                    </div>
+
+                    <div class="ai-questions" id="aiQuestions">
+                        <!-- Radar Chart Section -->
+                        <div class="section" style="margin-top: 15px;">
+                            <div class="section-header">AI Usage Across Writing Process</div>
+                            <div class="section-body">
+                                <div class="radar-container">
+                                    <p class="radar-instructions">Drag the points to show AI usage at each stage as the % of time spent working on this assignment</p>
+                                    <svg class="radar-svg" id="radarChart" viewBox="0 0 320 320"></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Questions Section (dynamically populated) -->
+                        <div class="section">
+                            <div class="section-header">Reflection Questions</div>
+                            <div class="section-body" id="reflectionQuestions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generate Button -->
+            <button class="btn btn-primary" onclick="generateDocx()">
+                Download Coversheet
+            </button>
+
+            <p class="footer-note">Qsheet was created by <a href="https://github.com/meowsoni" target="_blank">meowsoni</a></p>
+        </div>
+    </div>
+
+    <script src="docgen.js"></script>
+</body>
+</html>

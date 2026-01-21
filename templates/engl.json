@@ -1,0 +1,39 @@
+{
+  "name": "ENGL",
+  "title": "English Department AI Declaration",
+  "studentFields": [
+    { "id": "studentId", "label": "Student ID", "placeholder": "e.g., 32011023", "type": "text" },
+    { "id": "moduleCode", "label": "Module Code", "placeholder": "e.g., ENGL1089", "type": "text" },
+    { "id": "moduleName", "label": "Module Name", "placeholder": "e.g., The Novel", "type": "text" },
+    { "id": "assignmentNo", "label": "Assignment No.", "placeholder": "1 for mid-semetser, 2 for final", "type": "text" },
+    { "id": "seminarTutor", "label": "Seminar Tutor", "placeholder": "e.g., Dr. Soni", "type": "text" },
+    { "id": "personalTutor", "label": "Personal Tutor", "placeholder": "e.g., Prof. Jones", "type": "text" },
+    { "id": "wordCount", "label": "Word Count", "placeholder": "e.g., 2500", "type": "text" },
+    { "id": "submissionDate", "label": "Submission Date", "placeholder": "", "type": "date" }
+  ],
+  "aiCheckboxLabel": "I used AI to help me complete this assignment",
+  "radarLabels": ["Conception", "Research", "Drafting", "Style", "Proofing"],
+  "reflectionQuestions": [
+    {
+      "id": "questionA",
+      "letter": "a",
+      "text": "One way in which the AI was helpful for this assignment:",
+      "placeholder": "Write reflectively",
+      "wordLimit": 50
+    },
+    {
+      "id": "questionB",
+      "letter": "b",
+      "text": "One way in which AI was unhelpful for this assignment:",
+      "placeholder": "Write reflectively",
+      "wordLimit": 50
+    },
+    {
+      "id": "questionC",
+      "letter": "c",
+      "text": "Do you think AI helped you complete the assignment in less time than you would have otherwise taken?",
+      "placeholder": "Give us a sense of by 'how much'",
+      "wordLimit": 50
+    }
+  ]
+}
