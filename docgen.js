@@ -405,7 +405,7 @@ async function generateDocx() {
     
     // Create blob and download
     const blob = new Blob([html], { type: 'application/msword' });
-    const filename = `Qsheet_${studentId}_${moduleCode}.docx`;
+    const filename = `Qsheet_${studentId}_${moduleCode}.doc`;
     
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
